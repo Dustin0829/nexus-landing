@@ -38,15 +38,17 @@ export default function NexusLanding() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-6 lg:px-8">
-          <motion.span
-            className="text-xl font-bold"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            Nexus
-          </motion.span>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <div className="container mx-auto flex h-16 max-w-screen-2xl items-center px-6 lg:px-8">
+          <div className="flex-1">
+            <motion.span
+              className="text-xl font-bold"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              Nexus
+            </motion.span>
+          </div>
+          <nav className="hidden md:flex items-center justify-center flex-1 space-x-6 text-sm font-medium">
             <motion.a href="#features" className="transition-colors hover:text-primary" whileHover={{ scale: 1.05 }}>
               Features
             </motion.a>
@@ -61,16 +63,18 @@ export default function NexusLanding() {
               Preview
             </motion.a>
           </nav>
-          <div className="flex items-center space-x-2">
+          <div className="flex-1 flex justify-end items-center space-x-2">
             <ThemeToggle />
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="sm"
-                className="hidden sm:inline-flex bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 shadow-lg hover:shadow-red-500/25"
-              >
-                Launch App
-                <ChevronRight className="ml-1 h-3 w-3" />
-              </Button>
+              <a href="https://nexus-app-lemon.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="sm"
+                  className="hidden sm:inline-flex bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 shadow-lg hover:shadow-red-500/25"
+                >
+                  Launch App
+                  <ChevronRight className="ml-1 h-3 w-3" />
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>
